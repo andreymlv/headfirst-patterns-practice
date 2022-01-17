@@ -13,7 +13,7 @@ public final class Soy implements Beverage {
     }
 
     @Override
-    public double cost() {
+    public double cost() throws RuntimeException {
         switch (beverage.size()) {
             case SMALL -> {
                 return beverage.cost() + 0.1;
@@ -22,7 +22,7 @@ public final class Soy implements Beverage {
                 return beverage.cost() + 0.15;
             }
             case LARGE -> {
-                return beverage.cost() + 0.20;
+                return beverage.cost() + 0.2;
             }
             default -> throw new RuntimeException("Cost is not provided.");
         }

@@ -3,7 +3,7 @@ package com.company.c3;
 public interface Beverage {
     String description();
 
-    double cost();
+    double cost() throws RuntimeException;
 
     default Size size() {
         return Size.UNKNOWN;
